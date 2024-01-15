@@ -57,6 +57,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -104,7 +105,7 @@
       <recent name="org.producer.config" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.KafkaProducerDemo">
+  <component name="RunManager" selected="Application.KafkaConsumerDemo">
     <configuration name="KafkaConsumerDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.consumer.KafkaConsumerDemo" />
       <module name="SpringKafkaDemo.Consumer.main" />
@@ -123,7 +124,7 @@
       <module name="SpringKafkaDemo.Producer.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.producer.*" />
+          <option name="PATTERN" value="org.producer.record.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
