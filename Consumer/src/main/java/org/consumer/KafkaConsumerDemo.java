@@ -1,16 +1,14 @@
 package org.consumer;
 
+import lombok.extern.log4j.Log4j2;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
 
+@Log4j2
 @SpringBootApplication
 public class KafkaConsumerDemo {
     public static void main(String[] args) {
-//        new SpringApplicationBuilder(KafkaConsumerDemo.class)
-//                .web(WebApplicationType.NONE)
-//                .run(args);
+        log.info("Starting Consumer");
         SpringApplication.run(KafkaConsumerDemo.class, args);
     }
 }

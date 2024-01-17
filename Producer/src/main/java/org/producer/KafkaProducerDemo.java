@@ -10,9 +10,9 @@ import org.springframework.kafka.core.KafkaTemplate;
 @Log4j2
 @SpringBootApplication
 public class KafkaProducerDemo {
+
     public static void main(String[] args) {
-        log.warn("starting producer");
-        log.debug("debug starting producer");
+        log.info("Starting Producer");
         SpringApplication.run(KafkaProducerDemo.class, args);
     }
 
