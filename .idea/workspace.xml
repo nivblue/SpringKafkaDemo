@@ -78,6 +78,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.KafkaProducerDemo.executor": "Run",
+    "Gradle.Build SpringKafkaDemo.executor": "Run",
     "Gradle.SpringKafkaDemo:Consumer [:Consumer:KafkaConsumerDemo.main()].executor": "Run",
     "Gradle.SpringKafkaDemo:Consumer [:Consumer:Main.main()].executor": "Run",
     "Gradle.SpringKafkaDemo:Producer [:Producer:KafkaProducerDemo.main()].executor": "Run",
@@ -101,11 +103,12 @@
       <recent name="C:\Users\nivbl\repos\SpringKafkaDemo\Consumer\src\main\java\org\consumer" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.consumer.config" />
       <recent name="org.producer" />
       <recent name="org.producer.config" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.KafkaConsumerDemo">
+  <component name="RunManager" selected="Application.KafkaProducerDemo">
     <configuration name="KafkaConsumerDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.consumer.KafkaConsumerDemo" />
       <module name="SpringKafkaDemo.Consumer.main" />
@@ -156,8 +159,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.SpringKafkaDemo:Producer [build]" />
         <item itemvalue="Application.KafkaProducerDemo" />
+        <item itemvalue="Gradle.SpringKafkaDemo:Producer [build]" />
         <item itemvalue="Application.KafkaConsumerDemo" />
       </list>
     </recent_temporary>
