@@ -1,3 +1,5 @@
 rootProject.name = 'SpringKafkaDemo'
 include 'Producer'
 include 'Consumer'
+include 'RestClient'
+

@@ -1,17 +1,19 @@
 package org.producer.controller;
 
+import lombok.extern.log4j.Log4j2;
 import org.producer.record.MessageRequest;
-//import org.slf4j.Logger;
-//import org.slf4j.LoggerFactory;
+import org.springframework.http.ResponseEntity;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Objects;
+import java.util.Optional;
+
+@Log4j2
 @Controller
 @RequestMapping("/kafka/test/")
 public class MessageController {
-
-//    private static final Logger log = LoggerFactory.getLogger(MessageController.class);
 
     private KafkaTemplate<String, String> kafkaTemplate;
 
@@ -19,10 +21,26 @@ public class MessageController {
         this.kafkaTemplate = kafkaTemplate;
     }
 
-    @PostMapping
-    public void publish(@RequestBody MessageRequest request) {
-        System.out.println("Sending data : " + request.message());
-//        log.debug("Sending data : " + request.message());
-        kafkaTemplate.send("TEST_TOPIC", request.message());
+    @GetMapping
+    public ResponseEntity<String> getTest() {
+        return ResponseEntity.ok("Success");
+    }
+
+    @PostMapping("/send/")
+    public ResponseEntity<String> publish(@RequestBody MessageRequest request) {
+        try {
+            log.debug("Received data from rest : " + request.message());
+
+            if (Objects.nonNull(request.message())) {
+                log.debug("Sending data : " + request.message());
+                kafkaTemplate.send("TEST_TOPIC", request.message());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+
+            return ResponseEntity.internalServerError().build();
+        }
+
+        return ResponseEntity.ok("Success");
     }
 }
