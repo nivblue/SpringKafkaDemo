@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+    id 'java-library'
+}
+
+group = 'org.example'
+version = '0.0.2'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies { }
+
+test {
+    useJUnitPlatform()
+}

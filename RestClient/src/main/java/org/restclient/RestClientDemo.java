@@ -1,7 +1,7 @@
 package org.restclient;
 
 import lombok.extern.log4j.Log4j2;
-import org.restclient.record.MessageRequest;
+import org.sharedobjects.rest.MessageRequest;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.reactive.function.client.WebClient;
@@ -30,18 +30,21 @@ public class RestClientDemo {
         System.out.println(testGetResponse);
 
 
-        String testPostResponse = webClient
-                .post()
-                .uri(sendMessageUrl)
-                .bodyValue(new MessageRequest("Testing rest client"))
-                .retrieve()
-                .bodyToMono(String.class)
-                .block();
 
         System.out.println("response : ");
         System.out.println(testGetResponse);
 
-        System.out.println("Post response : ");
-        System.out.println(testPostResponse);
+
+        MessageRequest messageRequest = new MessageRequest("Testing rest client using shared package");
+
+//        String testPostResponse = webClient
+//                .post()
+//                .uri(sendMessageUrl)
+//                .bodyValue()
+//                .retrieve()
+//                .bodyToMono(String.class)
+//                .block();
+//        System.out.println("Post response : ");
+//        System.out.println(testPostResponse);
     }
 }
