@@ -1,6 +1,7 @@
-package org.consumer;
+package org.consumer.listeners;
 
 import lombok.extern.log4j.Log4j2;
+import org.sharedobjects.kafka.BasicMessage;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
@@ -8,7 +9,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class KafkaListeners {
     @KafkaListener(topics = "TEST_TOPIC", groupId = "groupId")
-    void listener(String data) {
-        log.debug("data received : " + data);
+    void listener(BasicMessage data) {
+        log.debug("data received as basic message : " + data.message());
     }
 }
